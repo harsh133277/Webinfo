@@ -1,6 +1,10 @@
 
+
+
 <html>
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+
+    
     <body>
 <div class="formBlock">
     <style>
@@ -48,20 +52,38 @@
              <br><br>
             <label for="textarea">Get In Touch!</label>
             <br><br>
+
             <input id="question" type="radio" name="enquiry" value="question">
             <label for="question">Question</label><br>
 
             <input id="comment" type="radio" name="enquiry" value="comment">
             <label for="comment">Comment</label><br>
 
-            <input id="hiring" type="radio" name="enquiry" value="hiring">
-            <label for="hiring">Hiring</label><br>
+            <script type="text/javascript">
+                function ShowHideDiv() {
+                    var chkYes = document.getElementById("chkYes");
+                    var dvPassport = document.getElementById("dvHiring");
+                    dvHiring.style.display = chkYes.checked ? "block" : "none";
+                }
+            </script>
+            
+            <label for="hiring">
+                <input type="radio" id="chkYes" name="chkHiring" onclick="ShowHideDiv()"/>
+                Hiring
+            </label>
+
+            <hr/>
+            
+            <div id="dvHiring" style="display: none">
+                Enter the hourly rate:
+                <input type="text" id="txtPassportNumber"/>
+            </div>
+
+
              <br>
             <textarea id="textareaspace" name="enquiry" class="textarea"></textarea>
             
-            <div id="hiring_form" style="display: none;">
-                <label>Hourly Charge: </label> <input type="number" name="hourly" required>
-            </div>
+           
             <br><br>
             <input type="submit" value="Submit Information">
             <input type="reset" value="Reset" id="reset">
@@ -70,24 +92,5 @@
 
 </div>
 </div>
-<!-- Your Honest page should go here.  Use the following info in your page:
-
-  Honesty Statement
-
-  I declare that my assignment is wholly my own work in accordance with Seneca Academic
-  Policy. No part of this assignment has been copied manually or electronically from any
-  other source (including web sites) except for the information supplied by the WEB222
-  instructors and / or made available in this assignment for my use.
-
-  I also declare that no part of this assignment has been distributed to other students.
-
-  Credits
-
-
-  Name: Harsh Vireshkumar Ka Patel
-
-  Dated: 08-13-2021
-
--->
 </body>
 </html>
